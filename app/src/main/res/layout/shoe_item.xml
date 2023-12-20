@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="shoe_item"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+<!-- Using linear layout vertical to display element by vertical   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Using linear layout horizontal to display line Name and data of name  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:text="@string/name"></TextView>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@{shoe_item.name}"></TextView>
+        </LinearLayout>
+        <!-- Using linear layout horizontal to display line company and data of company  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:text="@string/company_name"></TextView>
+
+            <TextView
+                android:id="@+id/company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@{shoe_item.company}"></TextView>
+        </LinearLayout>
+        <!-- Using linear layout horizontal to display line size and data of size  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"
+                android:text="@string/size"></TextView>
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+               ></TextView>
+        </LinearLayout>
+        <!-- Using linear layout horizontal to display line description and data of description  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:text="@string/description"></TextView>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@{shoe_item.description}"></TextView>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#000000" />
+    </LinearLayout>
+</layout>
